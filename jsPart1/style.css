@@ -1,0 +1,24 @@
+* {
+    font-family: Tahoma;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.buttons {
+    background-color: burlywood;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.buttons:hover {
+    background-color: black;
+    color: burlywood;
+}
