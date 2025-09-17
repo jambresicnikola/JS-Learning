@@ -79,3 +79,49 @@ switch(true) {
 }
 
 console.log(grade);*/
+
+/*let username = "      Nidjo           ".trim().toLowerCase();
+console.log(username);
+
+let fullName = "Jack Jackson";
+let firstName = fullName.slice(0, fullName.indexOf(" "));
+let lastName = fullName.slice(fullName.indexOf(" ") + 1);
+console.log("First name: " + firstName + "\nLast name: " + lastName);*/
+
+/*let counter = 0;
+
+while(counter < 10) {
+    console.log(counter);
+    counter++;
+}
+
+for(let i = 10; i > -1; i--) {
+    console.log(i);
+}*/
+
+let randomNumber = Math.floor(Math.random() * 100);
+let guess, attempts = 1;
+const message = document.getElementById("message");
+
+while(true) {
+    guess = Number(window.prompt("Guess the number (0-100):"));
+
+    if (guess < 0 || guess > 100 || isNaN(guess)) {
+        window.alert("Please enter a number between 0 and 100.");
+        continue;
+    }
+
+    if (guess == randomNumber) {
+        break;
+    } else {
+        attempts++;
+
+        if(guess < randomNumber) {
+            window.alert("Higher!");
+        } else {
+            window.alert("Lower!");
+        }
+    }
+}
+
+message.textContent = `Congrats, you guessed the right number! It took you ${attempts} attempts.`;
