@@ -71,3 +71,24 @@ console.log(max);*/
 
 console.log(sum(1, 2, 3, 4, 5));*/
 
+const diceNumber = document.getElementById("diceNumber");
+const result = document.getElementById("result");
+let rollResult;
+const diceImagesContainer = document.querySelector(".diceImagesContainer");
+
+function rollDice() {
+    let rollResults = [];
+    diceImagesContainer.innerHTML = "";
+
+    for(let i = 0; i < diceNumber.value; i++) {
+        rollResult = Math.floor(Math.random() * 6) + 1;
+        rollResults.push(rollResult);
+
+        let diceImage = document.createElement("img");
+        diceImage.src = "diceImages/" + rollResult + ".png";
+        diceImage.width = 60;
+        diceImagesContainer.append(diceImage);
+    }
+
+    result.textContent = "Dice: " + rollResults.join(", ");
+}
