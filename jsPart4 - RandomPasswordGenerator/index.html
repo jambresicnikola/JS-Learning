@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>JS Learning</title>
+</head>
+<body>
+    <h3>Random password generator</h3><br>
+    <label for="">Password length:</label>
+    <input type="number" id="passwordLength"><br>
+    <p>Select your options:</p>
+    <input type="checkbox" id="includeLowercaseChars"><label for="includeLowercaseChars"> Lowercase characters</label><br>
+    <input type="checkbox" id="includeUppercaseChars"><label for="includeUppercaseChars"> Uppercase characters</label><br>
+    <input type="checkbox" id="includeSpecialChars"><label for="includeSpecialChars"> Special characters</label><br>
+    <input type="checkbox" id="includeNumbers"><label for="includeNumbers"> Numbers</label><br><br>
+
+    <button onclick="generatePassword()">Generate</button>
+
+    <p id="returnMessage"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
